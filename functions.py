@@ -139,26 +139,26 @@ def differentiation(c1,v1,p1):
         print("Please enter a valid number.")
 
 
+def result():
+    a = ""
+    x = input("--> ")
+    a=a+x
+    return a
 
 
+def file_opening():
+    f = open("TEST.txt","a")
+    element = result() 
+    f.write(element+"\n")
+    f.close()
+    f = open("TEST.txt","r")
+    b = f.read()
+    print(b)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def file_reader():
+    file_name = input("File Name --> ")
+    f = open(file_name,"r")
+    contents = f.read()
+    print(contents)
+    f.close()
