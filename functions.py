@@ -151,9 +151,6 @@ def file_opening():
     element = result() 
     f.write(element+"\n")
     f.close()
-    f = open("TEST.txt","r")
-    b = f.read()
-    print(b)
 
 
 def file_reader():
@@ -161,4 +158,12 @@ def file_reader():
     f = open(file_name,"r")
     contents = f.read()
     print(contents)
+    f.close()
+    return contents
+
+
+def file_clear():
+    file_name = input("File to be cleared --> ")
+    f = open(file_name,"w")
+    f.write("")
     f.close()
