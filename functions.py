@@ -167,3 +167,17 @@ def file_clear():
     f = open(file_name,"w")
     f.write("")
     f.close()
+
+
+def dice():
+    import random
+    num = random.randrange(1,7)
+    return num
+
+
+def toss():
+    import random
+    l  = ["heads","tails"]
+    num = random.randrange(0,2)
+    return l[num]
+    
