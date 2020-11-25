@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"sync.gist": "a5e1e22030998afca21be7bb7c2f8cb5"
+	}
 }
