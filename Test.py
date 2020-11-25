@@ -14,6 +14,14 @@ while a != "0":
     elif a.lower() == "0":
         break
     else:
-        pass
-for url in result.split(sep = "\n"):
-    webbrowser.open_new(url)
+        break
+r = input("Do you want to open the websites provided in the file ? (Y/N)")
+if r.lower() == "y":
+    try:
+        for url in result.split(sep = "\n"):
+            webbrowser.open_new(url)
+    except NameError:
+        print()
+    print("Thank You for using the program")
+elif r.lower() == "n":
+    print("Thank You for using the program")
