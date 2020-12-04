@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"sync.gist": "a5e1e22030998afca21be7bb7c2f8cb5"
+		"sync.gist": "a5e1e22030998afca21be7bb7c2f8cb5",
+		"python.pythonPath": "/usr/bin/python3"
 	}
 }
