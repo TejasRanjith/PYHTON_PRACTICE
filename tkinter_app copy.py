@@ -1,3 +1,4 @@
+#part 1. :
 import tkinter
 
 root = tkinter.Tk()
