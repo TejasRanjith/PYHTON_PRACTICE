@@ -1,12 +1,13 @@
-def bin_convert (n) :                                                                                   # complete
+# complete
+def bin_convert (n) :                                                                                    
     try:
         x = bin(int(n))
         print(x)
     except ValueError :
         print(f"{n} is not a number so please enter a valid number.")    
 
-
-def sum_of_n_squares(n) :                                                                               # complete
+# complete
+def sum_of_n_squares(n) :                                                                                
     try:
         sm = 0
         for i in range(1, n+1) : 
@@ -15,8 +16,8 @@ def sum_of_n_squares(n) :                                                       
     except ValueError :
         print(f"{n} is not a number so please enter a valid number.")
 
-
-def compound_interest(principleAmount,rate,term) :                                                                          # complete
+# complete
+def compound_interest(principleAmount,rate,term) :                                                                           
     try:
         principleAmountInt =round(int(principleAmount),2)
         rateFloat= round(float(rate),2)
@@ -29,8 +30,8 @@ def compound_interest(principleAmount,rate,term) :                              
     except ValueError:
         print("Please enter a valid number")
 
-
-def circle_properties(r):                                                                               # complete
+# complete
+def circle_properties(r):                                                                                
     try:
         r1 = int(r)
         ar = 22/7 * r1 * r1
@@ -39,14 +40,14 @@ def circle_properties(r):                                                       
     except ValueError : 
         print("Please mention a valid number")
 
-
-def swapList(list):                                                                                     # complete
+# complete
+def swapList(list):                                                                                      
       
     start, *middle, end = list
     list = [end, *middle, start] 
     return list
-
-def numbers_between(start1,end1):                                                                       # complete
+# complete
+def numbers_between(start1,end1):                                                                        
     try:
         start = int(start1)
         end   = int(end1)
@@ -55,8 +56,8 @@ def numbers_between(start1,end1):                                               
     except ValueError:
         print("Please enter a valid number.")
 
-
-def square_properties(a1):                                                                              # complete
+# complete
+def square_properties(a1):                                                                               
     try:
         a = int(a1)
         ar = a**2
@@ -65,8 +66,8 @@ def square_properties(a1):                                                      
     except ValueError:
         print("Please enter a valid number.")
 
-
-def cube_properties(a1):                                                                                # complete
+# complete
+def cube_properties(a1):                                                                                 
     try:
         a = int(a1)
         tsa = 6*a
@@ -75,8 +76,8 @@ def cube_properties(a1):                                                        
     except ValueError:
         print("Please enter a valid number.")
 
-
-def rectangle_properties(l1,b1):                                                                        # complete
+# complete
+def rectangle_properties(l1,b1):                                                                         
     try:
         l = int(l1)
         b = int(b1)
@@ -86,8 +87,8 @@ def rectangle_properties(l1,b1):                                                
     except ValueError:
         print("Please enter a valid number.")
 
-
-def cuboid_properties(l1,b1,h1):                                                                        # complete
+# complete
+def cuboid_properties(l1,b1,h1):                                                                         
     try:
         l = int(l1)
         b = int(b1)
@@ -98,8 +99,8 @@ def cuboid_properties(l1,b1,h1):                                                
     except ValueError:
         print("Please enter a valid number.")
 
-
-def simple_interest(p1,r1,t1):                                                                         # complete
+# complete
+def simple_interest(p1,r1,t1):                                                                          
     try:
         p = int(p1)
         r = float(r1)
@@ -109,7 +110,8 @@ def simple_interest(p1,r1,t1):                                                  
     except ValueError:
         print("Please enter a valid number.")
 
-def triangle_properties(a1,b1,c1):                                                                     # complete
+# complete
+def triangle_properties(a1,b1,c1):                                                                      
     try:
         a = int(a1)
         b = int(b1)
@@ -122,7 +124,7 @@ def triangle_properties(a1,b1,c1):                                              
     except ValueError:
         print("Please enter a valid number.")
 
-
+# complete
 def differentiation(c1,v1,p1):
     try:
         c = int(c1)
@@ -138,21 +140,21 @@ def differentiation(c1,v1,p1):
     except ValueError:
         print("Please enter a valid number.")
 
-
+# complete
 def result():
     a = ""
     x = input("--> ")
     a=a+x
     return a
 
-
+# complete
 def file_opening():
     f = open("TEST.txt","a")
     element = result() 
     f.write(element+"\n")
     f.close()
 
-
+# complete
 def file_reader():
     file_name = input("File Name --> ")
     f = open(file_name,"r")
@@ -161,20 +163,20 @@ def file_reader():
     f.close()
     return contents
 
-
+# complete
 def file_clear():
     file_name = input("File to be cleared --> ")
     f = open(file_name,"w")
     f.write("")
     f.close()
 
-
+# complete
 def dice():
     import random
     num = random.randrange(1,7)
     return num
 
-
+# complete
 def toss():
     import random
     l  = ["heads","tails"]
