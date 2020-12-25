@@ -1,4 +1,4 @@
-#part 6. :
+#part 4. :
 import tkinter as tk
 
 root = tk.Tk()
@@ -17,26 +17,7 @@ e.grid(row = 0, column = 0,columnspan = 3,padx = 10,pady = 10)#(0,"Enetryour nam
 #    mylabel = tk.Label(root, text = hello)
 #    mylabel.pack()
 def button_click(number):
-    current = e.get()
-    e.delete(0,"end")
-    e.insert(0,str(current)+str(number)) 
-
-
-def button_add():
-    global first_number
-    first_number = int(e.get())
-    e.delete(0,"end")
-
-
-def button_equal():
-    second_number = e.get()
-    e.delete(0,"end")
-    e.insert(0, first_number + int(second_number))
-
-
-def button_clear():
-    e.delete(0,"end")
-
+    e.insert(0,number) 
 
 #define buttons
 button_1 = tk.Button(root,text = "1",padx = 40, pady = 20,command = lambda: button_click(1))
@@ -49,9 +30,9 @@ button_7 = tk.Button(root,text = "7",padx = 40, pady = 20,command = lambda: butt
 button_8 = tk.Button(root,text = "8",padx = 40, pady = 20,command = lambda: button_click(8))
 button_9 = tk.Button(root,text = "9",padx = 40, pady = 20,command = lambda: button_click(9))
 button_0 = tk.Button(root,text = "0",padx = 40, pady = 20,command = lambda: button_click(0))
-button_add = tk.Button(root,text = "+",padx = 39, pady = 20,command =  button_add)
-button_equal = tk.Button(root,text = "=",padx = 91, pady = 20,command =  button_equal)
-button_clear = tk.Button(root,text = "Clear",padx = 79, pady = 20,command = button_clear)
+button_add = tk.Button(root,text = "+",padx = 39, pady = 20,command = lambda: button_click(""))
+button_equal = tk.Button(root,text = "=",padx = 91, pady = 20,command = lambda: button_click(""))
+button_clear = tk.Button(root,text = "Clear",padx = 79, pady = 20,command = lambda: button_click(""))
 
 #put buttons on the screen
 
