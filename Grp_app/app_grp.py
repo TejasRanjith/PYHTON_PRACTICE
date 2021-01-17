@@ -1,127 +1,151 @@
-# ALWAYS RUN FUNC_GRP.PY first to get the expected program
-# Base for storing information
-import tkinter as tk 
-from tkinter import messagebox 
-
-database = {}
-data = {}
+main_datadict = {}
+def restart():
+    import os     #Bank_Management_System.py
+    os.system("python grp_app//Bank_Management_System.py")
 
 
-def chck_dict(e,p):
-    from func_grp import main_datadict
-    email_get = e.get()
-    pass_get = p.get()
-    for k in main_datadict:
-        if k == email_get:
-            if main_datadict[k][1] == pass_get:
-                strdict = str(main_datadict[k])
-    print(strdict)
+def sys_log():
+    from Bank_Management_System import new_contents
+    for elem in new_contents:
+        print(elem)
 
 
-def main_dict(f,l,e,p):
-    firstname_get = f.get()
-    email_get = e.get()
-    lastname_get = l.get()
-    pass_get = p.get()
+def login():
+    while 1==1:
+        print()
+        print("Type 'B' to check balance.")
+        print("Type 'W' to withdraw amount.")
+        print("Type 'D' to deposit particular amount.")
+        print("Type 'DEL' to delete the account")
+        print("Type 'L' to logout from your account.")
+        print()
+        b = input("Action --> ")
+        b = b.lower()
+        if b == "b":
+            print()
+            print("Balance of the account,",email_id,"is :",main_datadict[k][5],"AED")
+        elif b == "del":
+            print()
+            print("**  ARE YOU SURE YOU WANT TO DELETE YOUR ACCOUNT FOREVER ? (Y/N)  **")
+            print("REMAINING BALANCE :",main_datadict[k][5])
+            opt = input("--> ")
+            if opt.lower() == "y":
+                print("YOUR ACOUNT",k,"HAS BEEN DELETED")
+                del main_datadict[k]
+                break
+            else:
+                print("DELETION CANCELLED.......")
+        elif b == "w":
+            print()
+            w = int(input("Amount to be withdrawed : "))
+            if w > 0:
+                if w < main_datadict[k][5]:
+                    main_datadict[k][5] = main_datadict[k][5] - w
+                    print("Remaining Balance after withdrawal,",main_datadict[k][5],"AED")
+                else:
+                    print("Sorry you don't have enough balance to withdraw : Please Deposit some amount")
+            else:
+                print("*** INVALID AMOUNT ***")
+        elif b == "d":
+            print()
+            d = int(input("Amount to be deposited : "))
+            if d > 0:
+                main_datadict[k][5] = main_datadict[k][5] + d
+                print("New Balance after deposition,",main_datadict[k][5],"AED")
+            else:
+                print("*** INVALID AMOUNT ***")
+        elif b == "l":
+            print()
+            print("YOU HAVE BEEN LOGGED OUT")
+            break
+        else:
+            print("INVALID OPTION")
 
-    data[email_get] = [firstname_get+" "+lastname_get,pass_get]
-    print(data)
-    
-    return data 
 
 
-def space(r,c):
-    return tk.Label(text = " ").grid(row = r,column = c)
+print()
+print("         *** BANK MANAGEMENT SYSTEM ***")
+while 1 == 1:
+    print()
+    print("=<<  Type 'L' to login if you have an acount.    >>=")
+    print("=<<  Type 'C' to create an account.              >>=")
+    print("=<<  Type '0' to exit the program.               >>=")
+    print()
+    a = input("Action --> ")
+    a = a.lower()
+# a is received in lower alphabet. 
+    if a == "l":
+        from Bank_Management_System import main_datadict
+        print()
+        email_id = input("REGISTERED EMAIL ID : ")
+        while 1 == 1:
+            if "@" and ".com" in email_id:
+                break
+            else:
+                print("PLEASE ENTER A VALID EMAIL ID..")
+                email_id = input("REGISTERED EMAIL ID : ")
+        password = input("PASSWORD : ")
+        for k in main_datadict:
+            if k == email_id:
+                if password == main_datadict[k][0]:
+                    print()
+                    print("Name:",main_datadict[k][1],main_datadict[k][2],)
+                    print("Date of Birth:",main_datadict[k][3])
+                    print("Phone number:",main_datadict[k][4])
+                    login()
+                    new_main_datadict = {}
+                    new_main_datadict.update(main_datadict)
+                    main_database = open("main_database.txt","w")
+                    main_database.write(str(main_datadict)+"\n")
+                    main_database.close()
+                else:
+                    print("WRONG PASSWORD. PLEASE TRY AGAIN....")
+            else:
+                print("EMAIL ID NOT FOUND. PLEASE RESGISTER")
+    elif a == "log":
+        sys_log()
 
-
-def e_get():
-    act_get = e_act.get()
-    if act_get.lower() == "login":
-        login = tk.Toplevel()
-        login.title("LOGIN WINDOW")
+    elif a == "c":
+        print()
+        print("RESGISTRATION FORM")
+        print()
+        firstname = input("FIRST NAME : ")
+        lastname = input("LAST NAME : ")
+        dob = input("DATE OF BIRTH (DD/MM/YYYY) : ")
+        phoneno = input("PHONE NO. : ")
+        email_id = input("EMAIL ID : ")
+        while 1==1:
+            if "@" and ".com" in email_id:
+                break
+            else:
+                print("PLEASE ENTER A VALID EMAIL ID.")
+                email_id = input("EMAIL ID : ")
+        newpass = input("NEW PASSWORD : ")
+        print()
+        print("Minimum Requirements : Add Balance (100 AED)")
+        balance = int(input("FIRST DEPOSIT: "))
+        if balance < 100:
+            print("MINIMUM AMOUNT == 100 AED ")
+            balance = int(input("FIRST DEPOSIT: "))
+        else:
+            print("YOUR ACCOUNT HAS BEEN CREATED....")
+            new_main_datadict = {}
+            new_main_datadict.update(main_datadict)
+            main_database = open("main_database.txt","w")
+            main_database.write(str(main_datadict)+"\n")
+            main_database.close()
         
-        l_email = tk.Label(login,text = "E-mail :",font = "Arial 16 italic")
-        l_pass = tk.Label(login,text = "Password :",font = "Arial 16 italic")
-
-        e_email = tk.Entry(login)
-        e_pass = tk.Entry(login,show = "*")
-
+        for i in range(0,1):      # 0  ,  1  ,  2  ,  3  ,  4   ,   5
+            main_datadict[email_id] = [newpass,firstname,lastname,dob,phoneno,balance]     
         
-
-        func = lambda: chck_dict(e_email,e_pass)
-        
-        b_login = tk.Button(login,text = "Login",command = func)
-
-        l_email.grid(row = 2,column = 0)
-        e_email.grid(row = 2,column = 1)
-        space(3,0)
-        space(3,1)
-        l_pass.grid(row = 4,column = 0)
-        e_pass.grid(row = 4,column = 1)
-        space(5,0)
-        space(5,1)
-        b_login.grid(row = 6,column = 0)
-    
-    elif act_get.lower() == "create":
-
-        create = tk.Toplevel()
-        create.title("CREATING ACCOUNT WINDOW")
-
-        l_firstname = tk.Label(create,text = "First Name: ",font = "Arial 16 italic")
-        l_lastname = tk.Label(create,text = "Last Name: ",font = "Arial 16 italic")
-        l_pass = tk.Label(create,text = "Password :",font = "Arial 16 italic")
-        l_email = tk.Label(create,text = "Email ID :",font = "Arial 16 italic")
-
-        e_firstname = tk.Entry(create)
-        e_lastname = tk.Entry(create)
-        e_email = tk.Entry(create)
-        e_pass = tk.Entry(create,show = "*")
-
-
-        l_firstname.grid(row = 2,column = 0)
-        e_firstname.grid(row = 2,column = 1)
-        space(3,0)
-        space(3,1)
-        l_lastname.grid(row = 4,column = 0)
-        e_lastname.grid(row = 4,column = 1)
-        space(5,0)
-        space(5,1)
-        l_email.grid(row = 6,column = 0)
-        e_email.grid(row = 6,column = 1)
-        space(7,0)
-        space(7,1)
-        l_pass.grid(row = 8,column = 0)
-        e_pass.grid(row = 8,column = 1)
-
-        func = lambda: main_dict(e_firstname,e_lastname,e_email,e_pass)
-
-        b_create = tk.Button(create,command = func,text = "Create Account")
-        b_create.grid(row = 9,column= 0)
-
-        
-
-    elif act_get == "clear":
-        pass
-    else:
-        pass
-    
-
-main = tk.Tk()
-main.title("MAZE  BANK")
-main.geometry("600x700")
-
-l_act = tk.Label(font = "Times 16 italic bold",text = "Action : ")
-e_act = tk.Entry(main)
-b_act = tk.Button(main,text = "Action",command = e_get)
-heading = tk.Label(text = "BANK MANAGER",font = "Times 50 bold underline")
-
-heading.grid(columnspan = 50,row = 0,column = 0)
-l_act.grid(row = 1,column = 0)
-e_act.grid(row = 1,column = 1)
-b_act.grid(row = 1,column = 2)
-
-
-
-main.mainloop()
-database.update(data)
-#print(database)
+    elif a == "0":
+        print()
+        print('''THANK YOU FOR USING THE PROGRAM 
+        WE EXPECT YOU TO COME BACK AGAIN :)  
+(press enter to completely terminate the program)''')
+        a = input()
+        if a.lower() == "restart":
+            restart()
+            break
+        else:
+            break
