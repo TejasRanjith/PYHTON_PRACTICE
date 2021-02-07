@@ -60,11 +60,10 @@ def countdown(t):
 
 
 
-countdown(5)
+# countdown(5)
 # from pynput.keyboard import Key, Controller
 # keyboard = Controller()
 # keyboard.press(Key.cmd_l)
 # keyboard.press("s")
 # keyboard.release(Key.cmd_l)
 # keyboard.release("s")
-
