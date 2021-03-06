@@ -182,4 +182,34 @@ def toss():
     l  = ["heads","tails"]
     num = random.randrange(0,2)
     return l[num]
-    
+
+
+def datatypefuncs():
+    while 1==1:
+        print()
+        print()
+        print("0 to exit")
+        a = eval(input("data type --> "))
+        print()
+        for elem in dir(a):
+            # print(elem)
+            if "_" not in elem:
+                print(elem)
+            else:
+                pass
+        else:
+            break
+
+
+def permutation():
+    from math import factorial
+    n = int(input('N --> '))
+    r = int(input("R --> "))
+    print("Permutation required:",int(factorial(n)/factorial(n-r)))
+
+
+def combination():
+    from math import factorial
+    n = int(input('N --> '))
+    r = int(input("R --> "))
+    print("Combination required:",int(factorial(n)/(factorial(r)*factorial(n-r))))

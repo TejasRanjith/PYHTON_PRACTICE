@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\home\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+    "python.pythonPath": "C:\\Users\\home\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "editor.foldingHighlight": false,
+    "editor.highlightActiveIndentGuide": false
 }

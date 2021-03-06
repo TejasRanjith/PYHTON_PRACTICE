@@ -67,3 +67,51 @@ def countdown(t):
 # keyboard.press("s")
 # keyboard.release(Key.cmd_l)
 # keyboard.release("s")
+
+
+# import webbrowser
+# google = input('Google search:')
+# webbrowser.open_new_tab('http://www.google.com/search?btnG=1&q=' + google)
+# #to search google 
+
+
+# string = "tejas@gmail.com"
+# name = string.partition("@")[0]
+# domain = string.partition("@")[-1]
+# print("domain name","name","domain")
+# print(domain.partition(".")[0],name,domain)
+
+# print(divmod(9,4))
+
+# d1 = {'k0': 0,'k1':1,'k2':2,'k3':3,'k4':4,'k5':5,'k6':6,'k7':7,'k8':8,'k9':9}
+# da = {'ka':'a','kb':'b','kc':'c','kd':'d','ke':'e','kf':'f','kg':'g','kh':'h','ki':'i','kj':'j','kk':'k','kl':'l','km':'m','kn':'n','ko':'o','kp':'p','kq':'q','kr':'r','ks':'s','kt':'t','ku':'u','kv':'v','kw':'w','kx':'x','ky':'y','kz':'z'}
+# for elem in d1:
+#     print(d1[elem],end = "")
+
+# Python program to print all permutations with 
+# duplicates allowed 
+  
+def toString(List): 
+    return ''.join(List) 
+  
+# Function to print permutations of string 
+# This function takes three parameters: 
+# 1. String 
+# 2. Starting index of the string 
+# 3. Ending index of the string. 
+def permute(a, l, r): 
+    if l == r: 
+        print toString(a) 
+    else: 
+        for i in xrange(l, r + 1): 
+            a[l], a[i] = a[i], a[l] 
+            permute(a, l + 1, r) 
+            a[l], a[i] = a[i], a[l] # backtrack 
+  
+# Driver program to test the above function 
+string = "ABC"
+n = len(string) 
+a = list(string) 
+permute(a, 0, n-1) 
+  
+# This code is contributed by Bhavya Jain 

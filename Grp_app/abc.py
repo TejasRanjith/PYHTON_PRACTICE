@@ -10,4 +10,4 @@ for elem in contents.split(sep = "\n"):
     if elem not in main_dict:
         main_dict.append(elem)
 print(main_dict)
-["{'tejas': ['050', 'T', 'R', '00', '050', 100]}", '{}', '', "{' ': [' ', ' ', ' ', ' ']}"]
+# ["{'tejas': ['050', 'T', 'R', '00', '050', 100]}", '{}', '', "{' ': [' ', ' ', ' ', ' ']}"]
