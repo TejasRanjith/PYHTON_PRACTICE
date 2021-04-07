@@ -1,5 +1,8 @@
 {
     "python.pythonPath": "C:\\Users\\home\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "editor.foldingHighlight": false,
-    "editor.highlightActiveIndentGuide": false
+    "editor.highlightActiveIndentGuide": false,
+    "python.linting.banditEnabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
