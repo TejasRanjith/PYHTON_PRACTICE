@@ -1,11 +1,12 @@
 class Circle():
     pi = 22/7
-    def __init__(self,radius = 1):
+
+    def __init__(self, radius=1):
         self.radius = radius
         self.area = (radius**2)*self.pi
+
     def circumference(self):
         return self.radius * self.pi * 2
-
 
 
 var = Circle(7)

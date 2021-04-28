@@ -12,22 +12,6 @@
 		"editor.copyWithSyntaxHighlighting": false,
 		"editor.occurrencesHighlight": false,
 		"editor.semanticHighlighting.enabled": false,
-		"workbench.list.keyboardNavigation": "simple",
-		"sqltools.connections": [
-			{
-				"mysqlOptions": {
-					"authProtocol": "xprotocol"
-				},
-				"previewLimit": 50,
-				"server": "localhost",
-				"port": 3306,
-				"driver": "MySQL",
-				"name": "Local instance MySQL80",
-				"database": "sql_store",
-				"username": "root",
-				"password": "035611",
-				"connectString": "localhost\\Local instance MySQL80"
-			}
-		]
+		"workbench.list.keyboardNavigation": "simple"
 	}
 }
