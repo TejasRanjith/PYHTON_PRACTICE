@@ -115,3 +115,17 @@
 # permute(a, 0, n-1) 
   
 # # This code is contributed by Bhavya Jain 
+
+# Code for renaming screenshots file
+# import os
+# dir = 'C://Users//home//Desktop//Desktop (2)//Screenshots'
+# for files in os.listdir(dir):
+#     print(files)
+#     for i in range(1,51):
+#         if files == f"Screenshot ({i}).png":
+#             print(True)
+#             os.rename(dir+f"//Screenshot ({i}).png",dir+f"//Screenshot ({i+4700}).png")
+#         else:
+#             continue
+    
+
