@@ -129,3 +129,19 @@
 #             continue
     
 
+# import stdiomask as sm
+# print(sm.getpass())
+#.r OUTPUT ==>>
+#.y Password: ***
+#.y 123
+
+# from geopy.geocoders import Nominatim
+  
+# # calling the nominatim tool
+# geoLoc = Nominatim(user_agent="GetLoc")
+  
+# # passing the coordinates
+# locname = geoLoc.reverse("25.3374, 55.4121")
+  
+# # printing the address/location name
+# print(locname.address)
