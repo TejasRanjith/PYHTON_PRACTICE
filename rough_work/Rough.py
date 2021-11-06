@@ -145,3 +145,17 @@
   
 # # printing the address/location name
 # print(locname.address)
+# f = open("text.txt","w")
+# f.write('''Smiling is infectious,
+# You catch it like the flu.
+# When someone smiled at me today,
+# I started smiling too.''')
+# f.close()
+# f = open("text.txt","r")
+# # contents = f.read()
+# print(f.read(7))
+# f.seek(2,0)
+# print(f.read(3))
+
+
+
