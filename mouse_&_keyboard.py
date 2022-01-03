@@ -32,12 +32,18 @@ def timer(n):
     import time
     time.sleep(n)
 
-n = 1
+n = 6
 # while True:
 timer(n)
-mouse.position = (782, 554)
-timer(n)
-mouse.click(Button.left,1)
-timer(n)
-mouse.position = (858, 386)
-mouse.click(Button.left,1)
+# mouse.position = (782, 554)
+# timer(n)
+# mouse.click(Button.left,1)
+# timer(n)
+# mouse.position = (858, 386)
+# mouse.click(Button.left,1)
+
+
+for elem in range(21,9931):
+    key(str(elem),Key.enter)
+    
+    
