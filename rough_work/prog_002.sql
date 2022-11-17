@@ -1,0 +1,19 @@
+-- CREATE Table furniture(
+--     NO INT PRIMARY KEY,
+--     ITEMNAME VARCHAR(30),
+--     TYPE VARCHAR(30),
+--     DATEOFSTOCK DATE,
+--     PRICE INT,
+--     DISCOUNT INT);
+-- drop table if exists furniture;
+-- INSERT INTO furniture VALUES
+-- (1,"White lotus Double Bed","Bed","23/02/02",30000,25),
+-- (2,"Pink feather Baby cot","Cot","20/01/02",7000,20),
+-- (3,"Dolphin Baby cot","Cot","19/02/02",9500,20),
+-- (4,"Decent Office Table","Table","01/01/02",25000,30),
+-- (5,"Comfort zone Double Bed","Bed","12/01/02",25000,25),
+-- (6,"Donald Baby cot","Cot","24/02/02",6500,15),
+-- (7,"Royal Finish Office Table","Table","20/02/02",18000,30),
+-- (8,"Royal tiger Sofa","Sofa","22/02/02",31000,30),
+-- (9,"Econo sitting Sofa","Sofa","13/12/01",9500,25),
+-- (10,"Eating Paradise Dining Table","Table","19/02/02",11500,25);

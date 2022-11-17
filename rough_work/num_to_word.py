@@ -100,5 +100,12 @@ def num_21_to_110():
         result = ' '.join(new_list)
         print(result)
 
-def num_111_to_120():
-    pass
+def num_111_to_1000():
+    num_str = input("Number in string format: ")
+    num_list = list(num_str)
+    if num_list[-2] == '1':
+        special = num_list[-2:]
+    special = str(special)
+    
+
+num_111_to_1000()

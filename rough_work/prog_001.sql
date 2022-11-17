@@ -1,0 +1,30 @@
+-- CREATE DATABASE School;
+-- USE School;
+-- CREATE TABLE Teachers(
+--     No INT ,
+--     Name VARCHAR(20),
+--     Age INT,
+--     Department VARCHAR(20),
+--     Date_of_join DATE,
+--     Salary INT,
+--     Gender CHAR(1))
+-- INSERT INTO teachers VALUES
+-- (1,"Jugal",34,"Computer","97/01/10",12000,"M"),
+-- (2,"Sharmila",31,"History","98/03/24",20000,"F"),
+-- (3,"Sandeep",32,"Maths","96/12/12",30000,"M"),
+-- (4,"Sangeeta",35,"History","99/07/01",40000,"F"),
+-- (5,"Rakesh",42,"Maths","97/09/05",25000,"M"),
+-- (6,"Shyam",50,"History","98/06/27",30000,"M"),
+-- (7,"Shiv",44,"Computer","97/02/25",21000,"M"),
+-- (8,"Shalakha",33,"Maths","97/07/31",20000,"F");
+
+-- SELECT * FROM Teachers;
+-- SELECT Name FROM teachers where Gender = 'F' AND Department = 'Maths';
+-- SELECT name,Date_of_join FROM teachers ORDER BY Date_of_join;
+-- SELECT Name,Salary,Age FROM teachers WHERE Gender = 'M';
+-- SELECT COUNT(*) FROM teachers WHERE Age > 23;
+-- SELECT (15/100)*Salary FROM teachers;
+
+-- SELECT * FROM teachers WHERE DAY(Date_of_join) > 24;
+-- ALTER Table teachers ADD (test03 CHAR(2));
+-- ALTER Table teachers DROP COLUMN test04;

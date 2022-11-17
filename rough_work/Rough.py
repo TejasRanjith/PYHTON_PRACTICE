@@ -480,8 +480,11 @@ dict_num_words = {
 #     f=f*l
 # print("The factorial of",n,"is",f)
 
-# to read the file present in this directory C:\Program Files\Call Of Duty Modern Warfare\Call of Duty - Modern Warfare Remastered [FitGirl Repack] using pickle module
-import pickle
-with open("C:\Program Files\Call Of Duty Modern Warfare\Call of Duty - Modern Warfare Remastered [FitGirl Repack]") as f:
-    data = pickle.load(f)
-    print(data)
+
+# d = {25:["a","b","c"],56:["d","e","f"],34:["g","h","i"]}
+
+# for key in d:
+#     for elem in d[key]:
+#         print(elem,end=" ")
+#     print()
+
